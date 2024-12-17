@@ -134,7 +134,7 @@ input:checked ~ label .pause {
    /* display: none; */
 }
 
-/* @keyframes word {
+@keyframes word {
    0%,
    5%,
    100% {
@@ -146,7 +146,7 @@ input:checked ~ label .pause {
       filter: blur(35px);
       opacity: 0;
    }
-} */
+}
 
 /* Phone */
 @media (max-width: 575px) {
