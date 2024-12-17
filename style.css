@@ -9,6 +9,7 @@
 }
 
 body {
+   position: relative;
    user-select: none;
    font-family: cursive;
    font-size: 30px;
@@ -41,7 +42,7 @@ body {
    font-family: "Lobster Two", cursive;
    max-height: 100%;
    letter-spacing: 5px;
-   font-size: 8rem;
+   font-size: 6rem;
    position: absolute;
 
    backdrop-filter: blur(8px) saturate(100%);
@@ -50,7 +51,7 @@ body {
    border-radius: 12px;
    border: 1px solid rgba(255, 255, 255, 0.5);
 
-   animation: word 17s infinite ease-in-out;
+   animation: word 13s infinite ease-in-out;
 }
 .word div {
    display: inline;
@@ -64,7 +65,7 @@ body {
 
 .word img {
    margin: auto;
-   width: 50%;
+   width: 25%;
    display: block;
 }
 
@@ -86,10 +87,13 @@ input {
 }
 
 .nav {
+   margin: 0 auto;
    user-select: none;
    cursor: pointer;
-   inset: 850px 50%;
-   position: fixed;
+   bottom: 80px;
+   left: 50%;
+   transform: translateX(-30px);
+   position: absolute;
    font-size: 32px;
 }
 
@@ -130,7 +134,7 @@ input:checked ~ label .pause {
    /* display: none; */
 }
 
-@keyframes word {
+/* @keyframes word {
    0%,
    5%,
    100% {
@@ -142,4 +146,87 @@ input:checked ~ label .pause {
       filter: blur(35px);
       opacity: 0;
    }
+} */
+
+/* Phone */
+@media (max-width: 575px) {
+   .container {
+      .word {
+         line-height: 1.2;
+         padding: 25px 0 25px 0;
+         display: flex;
+         flex-direction: column;
+         row-gap: 10px;
+         width: 350px;
+         div {
+            font-size: 60px;
+         }
+         img {
+            width: 250px;
+         }
+         span {
+            display: block;
+            font-size: 45px;
+         }
+      }
+   }
+   .nav {
+      bottom: 60px;
+      transform: translateX(-30px);
+   }
 }
+
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+   .container {
+      .word {
+         line-height: 1.2;
+         padding: 25px 0 25px 0;
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+         min-width: 450px;
+         margin: 0 20px;
+         div {
+            font-size: 80px;
+         }
+         img {
+            width: 300px;
+         }
+         span {
+            display: block;
+            font-size: 50px;
+         }
+      }
+   }
+   .nav {
+      bottom: 60px !important;
+   }
+}
+
+/* Desktop */
+/* @media (min-width: 992px) {
+   .container {
+      .word {
+         line-height: 1.2;
+         padding: 25px 0 25px 0;
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+         width: 350px;
+         div {
+            font-size: 60px;
+         }
+
+         span {
+            display: block;
+            font-size: 50px;
+         }
+      }
+   }
+   .nav {
+      width: auto;
+      bottom: 30px;
+      transform: translateX(-30px);
+   }
+} */
