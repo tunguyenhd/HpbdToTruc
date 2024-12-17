@@ -51,7 +51,7 @@ body {
    border-radius: 12px;
    border: 1px solid rgba(255, 255, 255, 0.5);
 
-   animation: word 13s infinite ease-in-out;
+   animation: word 12s infinite ease-in-out;
 }
 .word div {
    display: inline;
