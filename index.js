@@ -4,12 +4,12 @@ let nav = document.querySelector(".nav");
 let pause = nav.querySelector(".pause");
 let play = nav.querySelector(".play");
 
-// if (audio.paused) {
-//    audio.play();
-//    pause.style.opacity = "1";
-//    play.style.opacity = "0";
-//    console.log("play");
-// }
+ if (audio.played) {
+    
+    pause.style.opacity = "1";
+    play.style.opacity = "0";
+    console.log("play");
+}
 
 label.addEventListener("click", () => {
    if (audio.paused) {
